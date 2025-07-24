@@ -3,6 +3,8 @@
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
+\usepackage[center]{caption}
+\usepackage{float}
 \usepackage[natbib=true, style=numeric,sorting=none]{biblatex}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3.5cm,right=3.5cm,marginparwidth=5cm,includefoot]{geometry}
 
@@ -15,6 +17,12 @@
 \fancyfoot[C]{Alexander Schwab, Dennis Deifel, René Ott}
 \fancyfoot[R]{\thepage}
 
+%\fancypagestyle{plain}{%
+%\fancyhf{} % clear all header and footer fields
+%\fancyfoot[C]{\bfseries \thepage} % except the center
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}}
+
 \addbibresource{sample.bib}
 
 \title{Der Einfluss verbaler emotionaler Beeinflussung auf das Wachstum und die Gesundheit von Pflanzen}
@@ -22,12 +30,15 @@
 \date{\today}
 
 \begin{document}
+    \renewcommand{\figurename}{Abb.}
+
     \maketitle
     \tableofcontents
     \pagebreak
 
     \include{introduction}
     \include{setup}
-     
+    \include{methodic}
+    
     \printbibliography
 \end{document}
